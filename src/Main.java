@@ -6,19 +6,9 @@ public class Main {
     private static Map<Integer, Map<Double, Integer>> results = new HashMap<>();
 
     public static void main(String[] args) {
-        List<Integer> nn = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        for (int i = 0; i < nn.size(); i++) {
-            new Server(13_000, 20_000, 0.5, nn.get(i) * 50).run();
+        for (Integer n : List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)) {
+            new Server(13_000, 20_000, 0.5, n * 50).run();
         }
-//        new Server(10_000, 20_000, 1, 100).run();
-//        new Server(10_000, 20_000, 1, 500).run();
-//        new Server(10_000, 20_000, 1, 1000).run();
-//        new Server(10_000, 20_000, 1, 5000).run();
-//        new Server(10_000, 20_000, 1, 10000).run();
-//        new Server(10_000, 20_000, 1, 15000).run();
-//        new Server(10_000, 20_000, 1, 20000).run();
-//        new Server(10_000, 20_000, 1, 25000).run();
-//        new Server(10_000, 20_000, 1, 30000).run();
     }
 
     static class Server {
